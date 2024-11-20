@@ -125,7 +125,7 @@ const MuscleSelector = () => {
   const formatPoints = (pointsString) => pointsString.trim().split(' ').join(',');
 
   const getMuscleColor = (muscle) => {
-    return selectedMuscles.has(muscle) ? '#ff6b6b' : '#adb5bd';
+    return selectedMuscles.has(muscle) ? '#000000' : '#adb5bd';
   };
 
   const handleMuscleClick = (muscle) => {
@@ -229,7 +229,7 @@ const MuscleSelector = () => {
 
 
 return (
-  <div className="flex flex-col items-center p-4 space-y-4 bg-purple-900 h-screen">
+  <div className="flex flex-col items-center p-4 space-y-4 bg-purple-900 min-h-screen ">
     <h2 className="text-xl font-semibold text-center mb-6">
       Which body parts are you experiencing pain in?
     </h2>
@@ -248,12 +248,12 @@ return (
       </div>
     </div>
     <div className="w-full max-w-md">
-      <h3 className="text-lg font-semibold mb-2">Selected Muscles:</h3>
+      <h3 className="text-lg font-semibold mb-2 text-black">Selected Muscles:</h3>
       <div className="space-y-1">
         {Array.from(selectedMuscles).map((muscle) => (
-          <div key={muscle} className="flex items-center justify-between bg-gray-100 p-2 rounded">
+          <div key={muscle} className="flex items-center justify-between bg-black p-2 rounded text-purple-400">
             <span>{muscle.toLowerCase().replace(/_/g, ' ')}</span>
-            <button onClick={() => handleMuscleClick(muscle)} className="text-red-500 hover:text-red-700">
+            <button onClick={() => handleMuscleClick(muscle)} className="text-purple-400 hover:text-purple-400">
               ×
             </button>
           </div>
@@ -262,7 +262,7 @@ return (
     </div>
     {/* Added simple corner button */}
     <button
-      className="fixed bottom-4 right-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800"
+      className="fixed bottom-4 right-4 bg-black text-purple-400 px-4 py-2 rounded hover:bg-purple-800"
       onClick={handleSaveJournal}
     >
       Go to Journey Roadmap
