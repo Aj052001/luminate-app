@@ -582,7 +582,7 @@ const JournalScreen = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-purple-950 to-black p-6">
       <h1 className="text-2xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text mb-6">
-        Journey Journal
+      Journal Your Intention
       </h1>
 
       {/* Medicine Selection */}
@@ -640,7 +640,7 @@ const JournalScreen = () => {
       {/* Current State with Voice Input */}
       <div className="mb-4 relative">
         <label className="block text-purple-400 mb-2">
-          Current State of Mind
+        Current State?
           {listening && recordingField === "currentState" && (
             <span className="ml-2 text-purple-300 text-sm animate-pulse">
               Recording...
@@ -654,7 +654,7 @@ const JournalScreen = () => {
               : currentState
           }
           onChange={(e) => setCurrentState(e.target.value)}
-          placeholder="Describe your current mental state..."
+          placeholder="What is your current state of mind?"
           className="w-full min-h-[150px] bg-black border-2 border-purple-500 text-purple-300 rounded-lg p-3"
         />
       
@@ -675,7 +675,7 @@ const JournalScreen = () => {
       {/* Post Experience with Voice Input */}
       <div className="mb-4 relative">
         <label className="block text-purple-400 mb-2">
-          Post-Experience Outlook
+        Post experience?
           {listening && recordingField === "postExperience" && (
             <span className="ml-2 text-purple-300 text-sm animate-pulse">
               Recording...
@@ -689,7 +689,7 @@ const JournalScreen = () => {
               : postExperience
           }
           onChange={(e) => setPostExperience(e.target.value)}
-          placeholder="Describe your desired outcome..."
+          placeholder="What is the outlook you hope to achieve after the experience?"
           className="w-full min-h-[150px] bg-black border-2 border-purple-500 text-purple-300 rounded-lg p-3"
         />
        
@@ -714,7 +714,7 @@ const JournalScreen = () => {
         className="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 rounded-lg 
         hover:from-purple-700 hover:to-purple-800 transition-all flex items-center justify-center"
       >
-        <Star className="mr-2" /> Save Journal Entry <Sparkles className="ml-2" />
+        <Star className="mr-2" /> Capture Intention <Sparkles className="ml-2" />
       </button>
     </div>
   );
